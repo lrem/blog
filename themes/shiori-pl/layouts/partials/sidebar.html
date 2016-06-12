@@ -1,0 +1,28 @@
+
+{{ if or .Site.Params.gravatar_id .Site.Params.author_name  }}
+<h3>
+  Autor
+</h3>
+
+<p>
+  <div class="media">
+    <img src="/lrem.jpg">
+    {{ if .Site.Params.gravatar_id }}
+    <img src="http://www.gravatar.com/avatar/{{ .Site.Params.gravatar_id }}?s=100" alt="{{ .Site.Params.author_name }}" class="pull-left">
+    {{ end }}
+    {{ if .Site.Params.author_name }}
+    <div class="media-body">
+      <h4 class="media-heading">{{ .Site.Params.author_name }}</h4>
+    </div>
+    {{ end }}
+  </div>
+  Naukowiec, inżynier, ojciec, troll.
+  Od lat nie mieszkałem w Polsce,
+  bloguję żeby nie zapomnieć języka.
+  Zdjęcie z połowy 2015.
+</p>
+{{ end }}
+
+{{ if .Site.Params.twitter_username }}
+<p><a href="https://twitter.com/{{ .Site.Params.twitter_username }}" class="twitter-follow-button" data-show-screen-name="false" data-show-count="true" data-dnt="true" data-size="large">Follow @{{ .Site.Params.twitter_username }}</a></p>
+{{ end }}

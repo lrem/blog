@@ -1,0 +1,32 @@
+{{ partial "layout_begin.html" . }}
+<div class="row">
+  <div class="col-sm-8">
+    <div class="page-archive">
+      {{ range .Site.Pages.ByDate.Reverse }}
+        {{ if eq .Type "pl" }}
+          {{ $post_month_year := .Date.Format "2006/01" }}
+          {{ if .NextInSection }}
+            {{ $newer_post_month_year := .NextInSection.Date.Format "2006/01" }}
+            {{ if not (eq $post_month_year $newer_post_month_year) }}
+              <h3 class="section-header-archive">
+                {{ $post_month_year }}
+              </h3>
+            {{ end }}
+          {{ else }}
+            <h3 class="section-header-archive">
+              {{ $post_month_year }}
+            </h3>
+          {{ end }}
+          <p>
+            <a href="{{ .Site.BaseURL }}{{ .RelPermalink }}" class="post-title-archive">{{ .Title }}</a>
+            <small class="text-muted">{{ .Date.Format "2006/01/02" }}</small>
+          </p>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  <div class="col-sm-4">
+    {{ partial "sidebar.html" . }}
+  </div>
+</div>
+{{ partial "layout_end.html" . }}

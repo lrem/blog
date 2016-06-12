@@ -1,0 +1,11 @@
+<footer>
+{{if .Site.Params.CopyrightHTML}}
+<div class="text-center">{{.Site.Params.CopyrightHTML | safeHTML}}</div>
+{{ else }}
+&copy; 2015.
+Blog prowadzony za pomocą
+<a href="http://gohugo.io/">Hugo</a> ({{ .Hugo.Version }}),
+skórka bazowana na
+<a href="https://github.com/chibicode/hugo-theme-shiori">Shiori Theme</a>.
+{{ end }}
+</footer>

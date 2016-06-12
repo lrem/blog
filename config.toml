@@ -3,6 +3,8 @@ languageCode = "pl-pl"
 title = "Remigiusz 'lRem' Modrzejewski"
 theme = "shiori-pl"
 copyright = "© Remigiusz Modrzejewski"
+googleAnalytics = "UA-4508229-2"
+disqusShortname = "lrem"
 
 [permalinks]
 pl = "/:year/:month/:day/:filename"
