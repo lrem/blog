@@ -1,0 +1,14 @@
+baseurl = "http://blog.lrem.net/"
+languageCode = "pl-pl"
+title = "Remigiusz 'lRem' Modrzejewski"
+theme = "shiori-pl"
+copyright = "© Remigiusz Modrzejewski"
+
+[permalinks]
+pl = "/:year/:month/:day/:filename"
+
+[author]
+name = "Remigiusz 'lRem' Modrzejewski"
+
+[params]
+  author_name = "Remigiusz 'lRem' Modrzejewski"
